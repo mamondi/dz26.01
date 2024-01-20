@@ -1,9 +1,6 @@
 #include "LList.h"
 
 int main() {
-SetConsoleCP(1251);
-SetConsoleOutputCP(1251);
-
     LinkedList<int> myList;
 
     myList.AddToHead(1);
@@ -12,10 +9,20 @@ SetConsoleOutputCP(1251);
 
     myList.Show();
 
-    myList.DeleteFromHead();
+    myList.InsertAtPosition(4, 1); 
     myList.Show();
 
-    myList.DeleteFromTail();
+    myList.DeleteAtPosition(2); 
+    myList.Show();
+
+    int position = myList.Find(2); 
+    cout << "Position of 2: " << position << endl;
+
+    int replaceCount = myList.Replace(2, 5); 
+    cout << "Replaced " << replaceCount << " occurrences of 2 with 5." << endl;
+    myList.Show();
+
+    myList.Reverse();\
     myList.Show();
 
     myList.DeleteAll();
